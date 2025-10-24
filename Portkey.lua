@@ -1,9 +1,9 @@
 _addon.name = 'Portkey'
 _addon.author = 'Mekaider'
-_addon.version = '0.0.3'
+_addon.version = '0.0.4'
 _addon.commands = {'portkey'}
 
-res = require('resources')
+require('tables')
 
 windower.register_event('addon command', function(...)
     local args = T{...}
