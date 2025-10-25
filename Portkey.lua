@@ -33,9 +33,9 @@ local zone_to_command_data = {
     [279] = commands.port_odyssey, -- Walk of Echoes P1
     [298] = commands.port_odyssey, -- Walk of Echoes P2
 
-    [133] = commands.sortie_port,  -- Sortie
-    [189] = commands.sortie_port,  -- Sortie
-    [275] = commands.sortie_port,  -- Sortie
+    [133] = commands.port_sortie,  -- Sortie
+    [189] = commands.port_sortie,  -- Sortie
+    [275] = commands.port_sortie,  -- Sortie
 
     [37]  = commands.port_temenos,  -- Temenos
     [38]  = commands.port_apollyon, -- Apollyon
