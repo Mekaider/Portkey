@@ -16,7 +16,7 @@ local commands = {
     enter_escha = {cmd='ew', action='enter'},
     exit_escha  = {cmd='ew', action='exit'},
     port_odyssey = {cmd='od', action='port'},
-    tenemos_port  = {cmd='te', action='port'},
+    port_temenos  = {cmd='te', action='port'},
     apollyon_port = {cmd='ap', action='port'},
 }
 -- https://github.com/Windower/Resources/blob/master/resources_data/zones.lua
