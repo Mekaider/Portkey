@@ -1,6 +1,6 @@
 _addon.name = 'Portkey'
 _addon.author = 'Mekaider'
-_addon.version = '0.0.6'
+_addon.version = '0.0.7'
 _addon.commands = {'portkey', 'pk'}
 
 local res = require('resources')
@@ -13,34 +13,41 @@ local ipc_modifier_options = {
     party = 'party',
 }
 local commands = {
-    enter_escha = {cmd='ew', action='enter'},
-    exit_escha  = {cmd='ew', action='exit'},
-    port_odyssey = {cmd='od', action='port'},
-    port_temenos  = {cmd='te', action='port'},
-    port_apollyon = {cmd='ap', action='port'},
-    port_sortie = {cmd='so', action='port'},
+    runic_return = {cmd='po', action='return'},
+    escha_enter = {cmd='ew', action='enter'},
+    escha_exit  = {cmd='ew', action='exit'},
+    odyssey_port = {cmd='od', action='port'},
+    sortie_port = {cmd='so', action='port'},
+    temenos_port  = {cmd='te', action='port'},
+    apollyon_port = {cmd='ap', action='port'},
 }
 -- https://github.com/Windower/Resources/blob/master/resources_data/zones.lua
 local zone_to_command_data = {
-    [126] = commands.enter_escha, -- Qufim Island
-    [25]  = commands.enter_escha, -- Misareaux Coast
-    [102] = commands.enter_escha, -- La Theine Plateau
-    [108] = commands.enter_escha, -- Konschtat Highlands
-    [117] = commands.enter_escha, -- Tahrongi Canyon
+    [79] = commands.runic_return, -- Caedarva Mire
+    [52] = commands.runic_return, -- Bhaflau Thickets
+    [61] = commands.runic_return, -- Mount Zhayolm
+    [52] = commands.runic_return, -- Arrapago Reef
+    [72] = commands.runic_return, -- Alzadaal Undersea Ruins
 
-    [288] = commands.exit_escha,  -- Escha Zi'Tah
-    [289] = commands.exit_escha,  -- Ru'Aun Gardens
-    [291] = commands.exit_escha,  -- Reisenjima
+    [126] = commands.escha_enter, -- Qufim Island
+    [25]  = commands.escha_enter, -- Misareaux Coast
+    [102] = commands.escha_enter, -- La Theine Plateau
+    [108] = commands.escha_enter, -- Konschtat Highlands
+    [117] = commands.escha_enter, -- Tahrongi Canyon
 
-    [279] = commands.port_odyssey, -- Walk of Echoes P1
-    [298] = commands.port_odyssey, -- Walk of Echoes P2
+    [288] = commands.escha_exit,  -- Escha Zi'Tah
+    [289] = commands.escha_exit,  -- Ru'Aun Gardens
+    [291] = commands.escha_exit,  -- Reisenjima
 
-    [133] = commands.port_sortie,  -- Sortie
-    [189] = commands.port_sortie,  -- Sortie
-    [275] = commands.port_sortie,  -- Sortie
+    [279] = commands.odyssey_port, -- Walk of Echoes P1
+    [298] = commands.odyssey_port, -- Walk of Echoes P2
 
-    [37]  = commands.port_temenos,  -- Temenos
-    [38]  = commands.port_apollyon, -- Apollyon
+    [133] = commands.sortie_port,  -- Sortie
+    [189] = commands.sortie_port,  -- Sortie
+    [275] = commands.sortie_port,  -- Sortie
+
+    [37]  = commands.temenos_port,  -- Temenos
+    [38]  = commands.apollyon_port, -- Apollyon
 }
 
 windower.register_event('addon command', function(...)
