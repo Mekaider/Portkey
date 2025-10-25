@@ -18,6 +18,7 @@ local commands = {
     port_odyssey = {cmd='od', action='port'},
     port_temenos  = {cmd='te', action='port'},
     port_apollyon = {cmd='ap', action='port'},
+    port_sortie = {cmd='so', action='port'},
 }
 -- https://github.com/Windower/Resources/blob/master/resources_data/zones.lua
 local zone_to_command_data = {
