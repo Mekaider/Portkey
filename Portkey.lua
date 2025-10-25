@@ -42,7 +42,7 @@ local zone_to_command_data = {
 
 windower.register_event('addon command', function(...)
     local args = {...}
-    command = args[1]:lower()
+    command = args[1] and args[1]:lower()
     local ipc_mod = command and ipc_modifier_options[command]
     if command and not ipc_mod then
         error('Unknown IPC modifier "%s".\n  valid commands are: a, all, p, party':format(command))
