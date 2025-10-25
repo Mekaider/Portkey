@@ -36,7 +36,7 @@ local zone_to_command_data = {
     [189] = commands.sortie_port,  -- Sortie
     [275] = commands.sortie_port,  -- Sortie
 
-    [37]  = commands.tenemos_port,  -- Temenos
+    [37]  = commands.port_temenos,  -- Temenos
     [38]  = commands.apollyon_port, -- Apollyon
 }
 
