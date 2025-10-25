@@ -1,6 +1,6 @@
 _addon.name = 'Portkey'
 _addon.author = 'Mekaider'
-_addon.version = '0.0.5'
+_addon.version = '0.0.6'
 _addon.commands = {'portkey', 'pk'}
 
 local res = require('resources')
@@ -22,6 +22,8 @@ local commands = {
 }
 -- https://github.com/Windower/Resources/blob/master/resources_data/zones.lua
 local zone_to_command_data = {
+    [126] = commands.enter_escha, -- Qufim Island
+    [25]  = commands.enter_escha, -- Misareaux Coast
     [102] = commands.enter_escha, -- La Theine Plateau
     [108] = commands.enter_escha, -- Konschtat Highlands
     [117] = commands.enter_escha, -- Tahrongi Canyon
