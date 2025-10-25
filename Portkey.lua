@@ -37,7 +37,7 @@ local zone_to_command_data = {
     [275] = commands.sortie_port,  -- Sortie
 
     [37]  = commands.port_temenos,  -- Temenos
-    [38]  = commands.apollyon_port, -- Apollyon
+    [38]  = commands.port_apollyon, -- Apollyon
 }
 
 windower.register_event('addon command', function(...)
